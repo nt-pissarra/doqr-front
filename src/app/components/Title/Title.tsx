@@ -1,5 +1,3 @@
-import React from "react";
-
 const Title = ({ title = "Controle de Funcionários" }) => {
   return (
     <div className="container mx-auto mt-8">

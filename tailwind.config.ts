@@ -12,6 +12,7 @@ export default {
         background: "var(--background)",
         primary: "var(--primary)",
         'primary-text': "var(--primary-text)",
+        'borders': "var(--borders)",
       },
     },
   },

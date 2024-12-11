@@ -6,9 +6,35 @@
   --primary: #7741fb;
   --primary-text: #0b0b0c;
   --background: #fdfcff;
+  --borders: #cdcad2;
   --font-inter: "Inter", sans-serif;
 }
 
 body {
   font-family: var(--font-inter);
+}
+
+.table-header {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 130px 260px 180px 280px 260px 210px 120px 70px;
+  align-items: center;
+  padding: 0 16px;
+  height: 51px;
+  background-color: #efedf2;
+}
+
+.table-header__title {
+  color: #58575a;
+  font-weight: bold;
+}
+
+.table-row {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 130px 260px 180px 280px 260px 210px 120px 70px;
+  align-items: center;
+  padding: 0 16px;
+  height: 51px;
+  border-top: 1px solid var(--borders);
 }
