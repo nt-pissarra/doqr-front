@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} antialiased bg-background`}>
         <Header />
-        {children}
+        <div className="container mx-auto mt-8">{children}</div>
       </body>
     </html>
   );
