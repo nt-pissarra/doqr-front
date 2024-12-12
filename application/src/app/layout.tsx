@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Doqr - Controle de Funcionário",
+  title: "Controle de Funcionário",
   description: "Teste DOqr",
 };
 

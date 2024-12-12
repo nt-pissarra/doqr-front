@@ -6,13 +6,10 @@ type Button = {
 
 const Button = ({ text, icon }: Button) => {
   return (
-    <a
-      href="/add"
-      className="w-full py-2 px-2 flex gap-2 bg-primary rounded-md justify-center items-center font-bold text-white"
-    >
+    <button className="w-full py-2 px-2 flex gap-2 leading-3 bg-primary rounded-md justify-center items-center font-bold text-white">
       {icon}
       {text}
-    </a>
+    </button>
   );
 };
 export default Button;
