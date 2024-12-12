@@ -14,6 +14,6 @@ jobs:
     steps:
       - uses: google-github-actions/release-please-action@v4
         with:
-          release-type: dotnet
+          release-type: node
           package-name: doqr-demo
           version-file: "helm/Chart.yaml"

@@ -17,10 +17,10 @@ WORKDIR /app
 ENV NODE_ENV=production
 
 # Copy necessary files
-COPY --from=builder ../next.config.js ./
-COPY --from=builder ../public ./public
-COPY --from=builder ../.next/standalone ./
-COPY --from=builder ../.next/static ./.next/static
+COPY --from=builder application/next.config.js ./
+COPY --from=builder application/public ./public
+COPY --from=builder application/.next/standalone ./
+COPY --from=builder application/.next/static ./.next/static
 
 # Start the app
 EXPOSE 3000
