@@ -1,5 +1,4 @@
 import HeaderTitle from "./HeaderTitle";
-import Logo from "./Logo";
 import UserInfo from "./UserInfo";
 
 const Header = () => {
