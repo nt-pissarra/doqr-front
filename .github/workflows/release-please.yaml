@@ -12,8 +12,9 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: google-github-actions/release-please-action@v4
+      - uses: actions/checkout@v3
+
+      - uses: googleapis/release-please-action@v3
         with:
           release-type: node
-          package-name: doqr-demo
-          version-file: "helm/Chart.yaml"
+          path: ./application
