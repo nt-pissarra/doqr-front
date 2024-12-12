@@ -4,7 +4,7 @@ type Button = {
   onClick?: () => void;
 };
 
-const Button = ({ text, icon, onClick }: Button) => {
+const Button = ({ text, icon }: Button) => {
   return (
     <a
       href="/add"
