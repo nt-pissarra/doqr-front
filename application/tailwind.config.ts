@@ -11,8 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         primary: "var(--primary)",
-        'primary-text': "var(--primary-text)",
-        'borders': "var(--borders)",
+        "primary-text": "var(--primary-text)",
+        borders: "var(--borders)",
+        delete: "var(--delete)",
       },
     },
   },

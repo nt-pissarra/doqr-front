@@ -18,9 +18,7 @@ export default function Home() {
     setUsers((prevUsers) => prevUsers.filter((user) => user.id !== userId));
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/${userId}`, {
       method: "DELETE",
-    })
-      .then((response) => response.json())
-      .then(() => {});
+    });
   };
 
   useEffect(() => {

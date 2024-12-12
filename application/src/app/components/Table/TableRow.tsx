@@ -38,12 +38,12 @@ const TableRow = ({ data, deleteUser }: TableRowProps) => {
       <div>
         <span
           className={`h-[25px] py-1 px-[8px] rounded-[12.5px] font-medium inline-flex items-center justify-center ${
-            data.status
+            data.status === 1
               ? "text-[#034906] bg-[#B5F8B7]"
               : "text-[#300404] bg-[#FBC9C9]"
           } font-bold`}
         >
-          {data.status ? "Ativo" : "Inativo"}
+          {data.status === 1 ? "Ativo" : "Inativo"}
         </span>
       </div>
       <span className="flex items-center gap-3 last:col-span-1">

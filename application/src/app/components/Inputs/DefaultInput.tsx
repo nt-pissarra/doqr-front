@@ -26,9 +26,9 @@ const DefaultInput = ({
       <label className="block font-medium">{label}</label>
       {type === "select" ? (
         <select
-          defaultValue=""
           className="invalid:text-gray-400 w-full pl-3 py-2 border border-borders rounded-md focus:outline-none focus:border-[#bfbbc5]"
           required
+          value={value}
           onChange={onChange}
         >
           <option disabled hidden value="">

@@ -63,8 +63,8 @@ const UserFormGroup = ({ formData, handleChange }: UserFormGroupProps) => {
           label="Status"
           type="select"
           options={[
-            { value: 0, option: "Inativo" },
             { value: 1, option: "Ativo" },
+            { value: 2, option: "Inativo" },
           ]}
           value={formData.status}
           onChange={(e) => handleChange("status", +e.target.value)}
