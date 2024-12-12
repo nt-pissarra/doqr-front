@@ -1,4 +1,5 @@
 name: release-please
+
 on:
   push:
     branches:
@@ -12,9 +13,13 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - uses: googleapis/release-please-action@v3
+      - name: Run Release Please
+        uses: googleapis/release-please-action@v4
         with:
           release-type: node
           path: application
+          manifest-path: application/package.json
+          token: ${{ secrets.GITHUB_TOKEN }}
