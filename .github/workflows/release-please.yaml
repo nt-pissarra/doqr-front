@@ -13,13 +13,13 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        ref: main
+        fetch-depth: 0
 
-      - name: Run Release Please
-        uses: googleapis/release-please-action@v4
-        with:
-          release-type: node
-          path: application
-          manifest-file: application/package.json
-          token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Run Release Please
+      uses: googleapis/release-please-action@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}

@@ -2,7 +2,8 @@
     "packages": {
       ".": {
         "changelog-path": "CHANGELOG.md",
-        "release-type": "dotnet",
+        "release-type": "node",
+        "path": "application/",
         "bump-minor-pre-major": false,
         "bump-patch-for-minor-pre-major": false,
         "draft": false,
