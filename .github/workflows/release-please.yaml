@@ -17,4 +17,4 @@ jobs:
       - uses: googleapis/release-please-action@v3
         with:
           release-type: node
-          path: ./application
+          path: application
