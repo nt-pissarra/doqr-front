@@ -38,7 +38,7 @@ export default function Add() {
     }
 
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/users`, {
-      method: "POST",
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },

@@ -2,6 +2,7 @@
 
 import { editIcon, deleteIcon } from "@/assets/icons";
 import { User } from "@/types/userType";
+import { useRouter } from "next/navigation";
 
 type TableRowProps = {
   data: User;
@@ -20,6 +21,12 @@ const mapEmploymentType = (employmentType: number): string => {
 };
 
 const TableRow = ({ data, deleteUser }: TableRowProps) => {
+  const router = useRouter();
+
+  const editUser = (id: number) => {
+    router.push(`edit/${id}`);
+  };
+
   return (
     <div className="table-row">
       <span className="font-bold">{data.name}</span>
@@ -40,7 +47,7 @@ const TableRow = ({ data, deleteUser }: TableRowProps) => {
         </span>
       </div>
       <span className="flex items-center gap-3 last:col-span-1">
-        <button onClick={() => console.log("clicked e")}>
+        <button onClick={() => editUser(data.id)}>
           <img src={editIcon.src} alt="" />
         </button>
         <button onClick={() => deleteUser(data.id)}>

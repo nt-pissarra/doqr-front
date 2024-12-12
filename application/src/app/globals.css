@@ -38,3 +38,8 @@ body {
   height: 51px;
   border-top: 1px solid var(--borders);
 }
+
+.form-container {
+  box-shadow: 1px 1px 16px 0px #00000026;
+  border-radius: 12px;
+}

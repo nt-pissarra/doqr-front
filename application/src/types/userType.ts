@@ -5,8 +5,26 @@ export type User = {
   cpf: string;
   phone: string;
   birthDate: Date;
-  // 0 -> CLT / 1 -> PJ
   employmentType: number;
-  // 0 -> Inativo / 1 -> Ativo
   status: number;
+};
+
+export type UserPayload = {
+  name: string;
+  email: string;
+  cpf: string;
+  phone: string;
+  birthDate: Date | string;
+  employmentType: number | string;
+  status: number | string;
+};
+
+export type UserInputs = {
+  name: string;
+  email: string;
+  cpf: string;
+  phone: string;
+  birthDate: string;
+  employmentType: string;
+  status: string;
 };

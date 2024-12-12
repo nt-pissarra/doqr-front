@@ -24,12 +24,6 @@ export default function Home() {
   };
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/users`)
-      .then((response) => response.json())
-      .then((data) => setUsers(data));
-  }, []);
-
-  useEffect(() => {
     if (search.length >= 3) {
       fetch(`${process.env.NEXT_PUBLIC_API_URL}/users?name=${search}`)
         .then((response) => response.json())
