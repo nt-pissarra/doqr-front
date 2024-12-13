@@ -22,6 +22,7 @@ const UserFormGroup = ({ formData, handleChange }: UserFormGroupProps) => {
         <DefaultInput
           label="E-mail"
           placeholder="e-mail"
+          inputType="email"
           value={formData.email}
           onChange={(e) => handleChange("email", e.target.value)}
         />
@@ -37,6 +38,7 @@ const UserFormGroup = ({ formData, handleChange }: UserFormGroupProps) => {
         <DefaultInput
           label="Celular"
           placeholder="Celular"
+          max={15}
           value={formatPhone(formData.phone)}
           onChange={(e) => handleChange("phone", e.target.value)}
         />

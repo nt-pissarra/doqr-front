@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { User } from "../types/userType";
 
-import Button from "./components/Button/Button";
 import SearchInput from "./components/Inputs/SearchInput";
 import TableHeader from "./components/Table/TableHeader";
 import TableRow from "./components/Table/TableRow";

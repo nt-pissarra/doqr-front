@@ -2,6 +2,7 @@
 
 import { editIcon, deleteIcon } from "@/assets/icons";
 import { User } from "@/types/userType";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 type TableRowProps = {
@@ -29,8 +30,8 @@ const TableRow = ({ data, deleteUser }: TableRowProps) => {
 
   return (
     <div className="table-row">
-      <span className="font-bold">{data.name}</span>
-      <span>{data.email}</span>
+      <span className="font-bold break-words">{data.name}</span>
+      <span className="overflow-hidden break-words">{data.email}</span>
       <span>{data.cpf}</span>
       <span>{data.phone}</span>
       <span>{new Date(data.birthDate).toLocaleDateString("pt-BR")}</span>
@@ -48,10 +49,15 @@ const TableRow = ({ data, deleteUser }: TableRowProps) => {
       </div>
       <span className="flex items-center gap-3 last:col-span-1">
         <button onClick={() => editUser(data.id)}>
-          <img src={editIcon.src} alt="" />
+          <Image width={14} height={14} src={editIcon.src} alt="edit-icon" />
         </button>
         <button onClick={() => deleteUser(data.id)}>
-          <img src={deleteIcon.src} alt="" />
+          <Image
+            width={14}
+            height={14}
+            src={deleteIcon.src}
+            alt="delete-icon"
+          />
         </button>
       </span>
     </div>

@@ -3,6 +3,7 @@ type DefaultInputProps = {
   label: string;
   placeholder?: string;
   type?: "text" | "select";
+  inputType?: string;
   options?: { value: number; option: string }[];
   max?: number;
   onChange: (
@@ -18,6 +19,7 @@ const DefaultInput = ({
   options,
   placeholder,
   type = "text",
+  inputType,
   onChange,
   max,
 }: DefaultInputProps) => {
@@ -48,7 +50,7 @@ const DefaultInput = ({
       ) : (
         <input
           className="w-full pl-3 py-2 border border-borders rounded-md focus:outline-none focus:border-[#bfbbc5]"
-          type="text"
+          type={inputType}
           placeholder={placeholder}
           value={value}
           onChange={onChange}
